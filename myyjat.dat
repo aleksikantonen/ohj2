@@ -1,0 +1,12 @@
+```
+Lähiruoantuottajat
+; Kenttien järjestys tiedostossa on seuraava:
+;  myyjän nimi	     |ytunnus	 |puhnro	|postiosoite	|postinumero	||kuvaus		|
+1 |Peran Peruna	     |1234567-8	 |0401231234	|Perunatie 1	|12345		|
+2 |Marin Marja	     |8765432-1	 |0501231234	|Marjatie 1	|23456		|
+3 |Katin Kala	     |2345678-9	 |0601231234	|Kalatie 1	|34567		|
+4 |Ykän Yrtit	     |9876543-2	 |0701231234	|Yrttitie 1	|45678		|
+5 |Kallen Kanat	     |3456789-0	 |0801231234	|Kanatie 1	|56789		|
+6 |Kaisan Kasvikset  |0987654-3	 |090123123	|Kasvistie 1	|67890		|
+7 |Hannan Hunaja     |45678901-2 |0101231234	|Hunajatie 1	|78901		|
+```
