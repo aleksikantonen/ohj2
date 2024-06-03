@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ComboBoxChooser?>
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import fi.jyu.mit.fxgui.StringGrid?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tiedosto">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Avaa" />
+                  <MenuItem mnemonicParsing="false" text="Lopeta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Muokkaa">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Lisää myyjä" />
+                  <MenuItem mnemonicParsing="false" text="Poista myyjä" />
+                  <MenuItem mnemonicParsing="false" text="Lisää tuote" />
+                  <MenuItem mnemonicParsing="false" text="Poista tuote" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Apua">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Tietoja" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <left>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" text="Lisää myyjä">
+                     <tooltip>
+                        <Tooltip text="Lisää myyjä rekisteriin" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Tallenna">
+                     <tooltip>
+                        <Tooltip text="Tallenna myyjä rekisteriin" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" text="Lisää tuote">
+                     <tooltip>
+                        <Tooltip text="Lisää tuote myyjän rekisteriin" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Poista tuote">
+                     <tooltip>
+                        <Tooltip text="Poista tuote myyjän rekisteristä" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.18812709030100336, 0.5493311036789298" BorderPane.alignment="CENTER">
+         <items>
+            <BorderPane prefHeight="305.0" prefWidth="183.0">
+               <center>
+                  <ListChooser prefHeight="180.0" prefWidth="109.0" rivit="Peran Peruna&#10;Marin Marja&#10;Katin Kala&#10;Ykän Yrtit&#10;Kallen Kanat&#10;Kaisan Kasvikset&#10;Hannan Hunaja" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Hakuehto" />
+                        <ComboBoxChooser maxWidth="300.0" />
+                        <TextField prefHeight="26.0" prefWidth="71.0" />
+                        <Label alignment="TOP_LEFT" maxWidth="300.0" text="Myyjät">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
+               </top>
+            </BorderPane>
+            <BorderPane>
+               <center>
+                  <ScrollPane prefHeight="307.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <GridPane hgap="5.0" vgap="2.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nimi">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="17.0" text="Y-Tunnus" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="17.0" text="Puhelinnumero" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="Postiosoite" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="Postinumero" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="Kuvaus" GridPane.rowIndex="5">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField text="Peran Peruna" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                              <TextField layoutX="120.0" layoutY="12.0" text="1234567-8" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                              <TextField layoutX="10.0" layoutY="12.0" text="0401231234" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                              <TextField text="Perunatie 1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                              <TextField text="12345" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                              <TextField text="Pera myy laatuperunaa" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+               <top>
+                  <Label text="Myyjän tiedot" BorderPane.alignment="CENTER" />
+               </top>
+            </BorderPane>
+            <BorderPane prefHeight="305.0" prefWidth="266.0">
+               <top>
+                  <Label text="Varaston tiedot" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <StringGrid rivit="Tuote|Hinta (€/kg)|Varasto (kg)&#10;Puikula|1,2|20&#10;Baltic Rose|1,8|40&#10;Rosamunda|1,6|23&#10;Annabelle|0,95|34&#10;Redstar|1,5|10&#10;Rocket|2,0|53&#10;Melody|1,9|60" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>
