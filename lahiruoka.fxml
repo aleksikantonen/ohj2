@@ -105,7 +105,7 @@
                   <VBox BorderPane.alignment="CENTER">
                      <children>
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Hakuehto" />
-                        <ComboBoxChooser maxWidth="300.0" />
+                        <ComboBoxChooser maxWidth="300.0" rivit="Nimi&#10;Tuotekategoria&#10;Alue&#10;" />
                         <TextField prefHeight="26.0" prefWidth="71.0" />
                         <Label alignment="TOP_LEFT" maxWidth="300.0" text="Myyjät">
                            <VBox.margin>
