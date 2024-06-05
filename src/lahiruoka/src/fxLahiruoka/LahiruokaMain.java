@@ -32,6 +32,6 @@ public class LahiruokaMain extends Application {
      * @param args Ei käytössä
      */
     public static void main(String[] args) {
-        Application.launch(args);
+        launch(args);
     }
 }
