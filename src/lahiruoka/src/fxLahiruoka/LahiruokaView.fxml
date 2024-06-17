@@ -19,8 +19,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?package fxLahiruoka?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="KerhoController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxLahiruoka.LahiruokaController">
         <top>
                 <MenuBar BorderPane.alignment="CENTER">
                         <menus>
@@ -57,7 +58,7 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                         </padding>
                                         <children>
-                                                <Button mnemonicParsing="false" text="Lisää myyjä">
+                                                <Button mnemonicParsing="false" onAction="#handleLisaaMyyja" text="Lisää myyjä">
                                                         <tooltip>
                                                                 <Tooltip text="Lisää myyjä rekisteriin" />
                                                         </tooltip>
@@ -79,12 +80,12 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                         </padding>
                                         <children>
-                                                <Button mnemonicParsing="false" text="Lisää tuote">
+                                                <Button mnemonicParsing="false" onAction="#handleLisaaTuote" text="Lisää tuote">
                                                         <tooltip>
                                                                 <Tooltip text="Lisää tuote myyjän rekisteriin" />
                                                         </tooltip>
                                                 </Button>
-                                                <Button mnemonicParsing="false" text="Poista tuote">
+                                                <Button mnemonicParsing="false" onAction="#handlePoista" text="Poista tuote">
                                                         <tooltip>
                                                                 <Tooltip text="Poista tuote myyjän rekisteristä" />
                                                         </tooltip>
@@ -95,7 +96,7 @@
                 </BorderPane>
         </bottom>
         <center>
-                <SplitPane dividerPositions="0.18812709030100336, 0.5493311036789298" BorderPane.alignment="CENTER">
+                <SplitPane dividerPositions="0.18812709030100336, 0.5560200668896321" BorderPane.alignment="CENTER">
                         <items>
                                 <BorderPane prefHeight="305.0" prefWidth="183.0">
                                         <center>
@@ -106,7 +107,7 @@
                                                         <children>
                                                                 <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Hakuehto" />
                                                                 <ComboBoxChooser maxWidth="300.0" rivit="Nimi&#10;Tuotekategoria&#10;Alue&#10;" />
-                                                                <TextField prefHeight="26.0" prefWidth="71.0" />
+                                                                <TextField onAction="#textEtsi" prefHeight="26.0" prefWidth="71.0" />
                                                                 <Label alignment="TOP_LEFT" maxWidth="300.0" text="Myyjät">
                                                                         <VBox.margin>
                                                                                 <Insets left="10.0" />
@@ -165,11 +166,11 @@
                                                                                         </padding>
                                                                                 </Label>
                                                                                 <TextField text="Peran Peruna" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
-                                                                                <TextField layoutX="120.0" layoutY="12.0" text="1234567-8" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
-                                                                                <TextField layoutX="10.0" layoutY="12.0" text="0401231234" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
-                                                                                <TextField text="Perunatie 1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
-                                                                                <TextField text="12345" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
-                                                                                <TextField text="Pera myy laatuperunaa" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                                                                                <TextField fx:id="textYtunnus" layoutX="120.0" layoutY="12.0" text="1234567-8" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                                                                                <TextField fx:id="textPuhnro" layoutX="10.0" layoutY="12.0" text="0401231234" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                                                                                <TextField fx:id="textOsoite" text="Perunatie 1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                                                                                <TextField fx:id="textPostinumero" text="12345" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                                                                                <TextField fx:id="textKuvaus" text="Pera myy laatuperunaa" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
                                                                         </children>
                                                                 </GridPane>
                                                         </content>
