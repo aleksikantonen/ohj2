@@ -1,18 +1,11 @@
 package fxLahiruoka;
 
 import fi.jyu.mit.fxgui.Dialogs;
+import fi.jyu.mit.fxgui.ModalController;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import java.net.URL;
-import java.util.ResourceBundle;
-import fi.jyu.mit.ohj2.*;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
-import javafx.application.Application;
-import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import java.util.Optional;
@@ -21,7 +14,7 @@ import java.util.Optional;
  * @author aleksikantonen
  * @version 5.6.2024
  */
-public class LahiruokaController {
+public class LahiruokaGUIController {
     @FXML
     private TextField textNimi;
     @FXML
@@ -35,12 +28,26 @@ public class LahiruokaController {
     @FXML
     private TextField textKuvaus;
 
+    /*
     @FXML private void handleLisaaMyyja() {
         Dialogs.showMessageDialog("Myyjä lisätty rekisteriin!");
+    }
+    */
+
+    @FXML private void handleLisaaMyyja() {
+        String myyjanNimi = Dialogs.showInputDialog("Anna myyjan nimi", "lahiruoka");
+        if ( myyjanNimi == null ) return;
+        ModalController.showModal(LahiruokaGUIController.class.getResource("LisaaMyyjaView.fxml"), "Lisää myyjä", null, "");
     }
 
     @FXML private void handleLisaaTuote() {
         Dialogs.showMessageDialog("Tuote lisätty rekisteriin!");
+    }
+
+    // Lisää tietoja ikkuna
+    @FXML private void handleTietoja() {
+        Dialogs.showMessageDialog("Ei osata vielä tietoja");
+        ModalController.showModal(LahiruokaGUIController.class.getResource("AboutView.fxml"), "Lahiruoka", null, "");
     }
 
     @FXML private void handlePoista() {

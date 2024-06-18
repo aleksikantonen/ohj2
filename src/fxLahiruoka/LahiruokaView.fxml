@@ -19,9 +19,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?package fxLahiruoka?>
 
-<BorderPane fx:id="KerhoController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxLahiruoka.LahiruokaController">
+<BorderPane fx:id="LahiruokaGUIController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxLahiruoka.LahiruokaGUIController">
         <top>
                 <MenuBar BorderPane.alignment="CENTER">
                         <menus>
@@ -41,7 +40,7 @@
                                 </Menu>
                                 <Menu mnemonicParsing="false" text="Apua">
                                         <items>
-                                                <MenuItem mnemonicParsing="false" text="Tietoja" />
+                                                <MenuItem mnemonicParsing="false" onAction="#handleTietoja" text="Tietoja" />
                                         </items>
                                 </Menu>
                         </menus>
@@ -140,7 +139,7 @@
                                                                                                 <Insets left="10.0" />
                                                                                         </padding>
                                                                                 </Label>
-                                                                                <Label layoutX="10.0" layoutY="17.0" text="Y-Tunnus" GridPane.rowIndex="1">
+                                                                                <Label layoutX="10.0" layoutY="17.0" text="Y-tunnus" GridPane.rowIndex="1">
                                                                                         <padding>
                                                                                                 <Insets left="10.0" />
                                                                                         </padding>
